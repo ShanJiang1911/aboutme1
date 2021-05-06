@@ -18,13 +18,12 @@ function greetingTime(){
 }
 
 
-let userName= prompt('Dear value guest, what is your name?');
-
-while (userName === '' || userName === null){
+  let userName= prompt('Dear value guest, what is your name?');
+  
+  while (userName === '' || userName === null){
   userName = prompt('Please enter a valid name')
-}
-
-alert('Hi ' + userName + ', Welcome to my page!') ;
+  }
+  alert ('Hi ' + userName + ', Welcome to my page!');
 
 
 let schooltime = prompt('Do you miss your school time? Please answer yes or no');
