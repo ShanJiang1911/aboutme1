@@ -17,7 +17,12 @@ function greetingTime(){
     document.write('<h5>' + greeting + '</h5>');  
 }
 
+
 let userName= prompt('Dear value guest, what is your name?');
+
+while (userName === '' || userName === null){
+  userName = prompt('Please enter a valid name')
+}
 
 alert('Hi ' + userName + ', Welcome to my page!') ;
 
@@ -45,7 +50,7 @@ let game = prompt('Do you like playing paintball?');
 let lowercaseGame = game.toLowerCase()
 
 if (lowercaseGame === 'yes' || lowercaseGame === 'y') {
-    alert('Let\'s go to range someday!');
+    alert('Let\'s go to range this weekend!');
   } else if (lowercaseGame === 'It\'s alright') {
     alert('Yeah, sometimes it\'s hurt');
   }
@@ -64,7 +69,7 @@ if (lowercaseFood === 'yes' || lowercaseFood === 'y') {
     alert('Sorry to hear that');
   }
   else {
-    alert('lol I know a good place, let me show you someday');
+    alert('lol I know a good place, let me show you');
   }
 
 
@@ -98,11 +103,46 @@ if (lowercaseVideo === 'yes' || lowercaseVideo === 'y') {
   }
 
 
+let myNum = 6;
+  
+for (let i=0; i < 4; i++ ) {
+  let userGuess = prompt('Guess which number is my favorite? Hint: it\'s between 1-10');
+  let numericalGuess = parseInt(userGuess);
+  if (numericalGuess === myNum){
+    alert('Congratulations! You are right!');
+    break;
+  } else if (numericalGuess < myNum){
+    alert('It\'s higher than this, keep going. You have ' + (3-i) + ' times left');
+  } else if (numericalGuess > myNum){
+    alert('It\'s lower than this. You have ' + (3-i) + ' times left. Try again');
+  } else {
+    alert('Please put number only. You have ' + (3-i) + ' times left');
+  }
+} 
 
 
 
+let myFavCar = ['jeep', 'tesla', 'benz'];
+let counter = 6;
+let correctGuess = false;
+alert('Lets play a game');
 
-
-
+while (correctGuess === false && counter > 0) {
+  alert('You have ' + counter + ' times left');
+  let userGuess1 = prompt('I love Cars! Take a guess which one is my favorite car brand');
+  let userGuess2 = userGuess1.toLowerCase();
+  for (let i = 0; i < myFavCar.length; i++) {
+    if (userGuess2 === myFavCar[i]) {
+      alert('You know me well!');
+      correctGuess = true;
+    } 
+  }
+    
+  if (correctGuess === false) {
+    alert('Pretty close. Try again. You have the power.');
+  }
+  
+  counter--;
+}
 
 
